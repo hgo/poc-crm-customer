@@ -26,12 +26,12 @@ public class SOAPConfig extends WsConfigurerAdapter
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-    @Bean(name = "customers")
+    @Bean(name = "customer")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema customerSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setPortTypeName("CustomersPort");
+        wsdl11Definition.setPortTypeName("CustomerPort");
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace("http://ws.crm.turkcell.com.tr/customers");
+        wsdl11Definition.setTargetNamespace("http://ws.crm.turkcell.com.tr/customer");
         wsdl11Definition.setSchema(customerSchema);
         return wsdl11Definition;
     }

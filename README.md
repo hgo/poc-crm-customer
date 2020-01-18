@@ -1,5 +1,8 @@
 # poc-crm-customer
 
+# initial
+`mvn clean install`
+
 ## build image
 `docker image build -t poc-customer .`
 
